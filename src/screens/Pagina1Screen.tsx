@@ -2,10 +2,11 @@ import { StackScreenProps } from '@react-navigation/stack';
 import React from 'react'
 import { Button, Text, View } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { RootStackParams } from '../navigators/StackNavigator';
 import { styles } from '../theme/appTheme';
 
 
-interface Props extends StackScreenProps<any,any>{ };
+interface Props extends StackScreenProps<RootStackParams,'Pagina1Screen'>{ };
 
 export const Pagina1Screen = ( { navigation }: Props )=> 
 {
@@ -17,12 +18,7 @@ export const Pagina1Screen = ( { navigation }: Props )=>
         <Button 
             title='Ir a Pagina 2'
             onPress={ ( )=> navigation.navigate( 'Pagina2Screen' ) }
-        />  
-        {/* <Button 
-            title='Ir a PersonaScreen '
-            onPress={ ( )=> navigation.navigate( 'PersonaScreen' ) }
-        />           */}
-
+        /> 
 
         <Text> 
             Navegar con argumentos

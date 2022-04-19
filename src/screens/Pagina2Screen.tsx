@@ -2,10 +2,11 @@ import { useNavigation } from '@react-navigation/native';
 import { StackScreenProps } from '@react-navigation/stack';
 import React, { useEffect } from 'react'
 import { Button, Text, View } from 'react-native'
+import { RootStackParams } from '../navigators/StackNavigator';
 import { styles } from '../theme/appTheme';
 
 
-interface Props extends StackScreenProps<any,any>{ };
+interface Props extends StackScreenProps<RootStackParams,'Pagina2Screen'>{ };
 
 export const Pagina2Screen = ( { navigation }: Props   )=> 
 {

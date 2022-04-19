@@ -1,10 +1,11 @@
 import { StackScreenProps } from '@react-navigation/stack'
 import React, { useEffect } from 'react'
 import { Button, Text, View } from 'react-native'
+import { RootStackParams } from '../navigators/StackNavigator'
 import { styles } from '../theme/appTheme'
 
 
-interface Props extends StackScreenProps<any,any>{ };
+interface Props extends StackScreenProps<RootStackParams,'Pagina3Screen'>{ };
 
 export const Pagina3Screen = (  { navigation }: Props  )=> 
 {
@@ -22,11 +23,11 @@ export const Pagina3Screen = (  { navigation }: Props  )=>
 
       <Button
         title='Regresar'
-        onPress={ ()=> navigation.pop( ) }
+        onPress={ ( )=> navigation.pop( ) }
       />
       <Button
         title='Ir a Pagina 1'
-        onPress={ ()=> navigation.popToTop( ) }
+        onPress={ ( )=> navigation.popToTop( ) }
       />
     </View>
   )
